@@ -1,0 +1,32 @@
+﻿@page
+@model RazorPagesDemo.Pages.Forms.StudentFormModel
+@{
+}
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<h1>Student Information Form</h1>
+<form method="post">
+    <div>
+        <input type="text" asp-for="Student.FirstName" placeholder="First Name" />
+        <span asp-validation-for="Student.FirstName" />
+    </div>
+    <div>
+        <input type="text" asp-for="Student.LastName" placeholder="Last Name" />
+        <span asp-validation-for="Student.LastName" />
+    </div>
+    <div>
+        <input type="text" asp-for="Student.Email" placeholder="Email Address" />
+        <span asp-validation-for="Student.Email" />
+    </div>
+    <div>
+        <input type="text" asp-for="Student.UniName" placeholder="University Name" />
+        <span asp-validation-for="Student.UniName" data/>
+    </div>
+    <div>
+        <input type="date" asp-for="Student.BirthDate" placeholder="Birth date" />
+        <span asp-validation-for="Student.BirthDate" />
+    </div>
+    <button type="submit">Submit</button>
+</form>
