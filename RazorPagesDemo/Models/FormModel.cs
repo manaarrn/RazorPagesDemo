@@ -23,6 +23,8 @@ namespace RazorPagesDemo.Models
         public string UniName { get; set; }
         [Required(ErrorMessage = "Date of birth is required")]
         public DateTime BirthDate { get; set; }
+        [Required]
+        public int Year { get; set; }
 
     }
 }

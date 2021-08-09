@@ -21,6 +21,10 @@ namespace RazorPagesDemo.Pages.Forms
             {
                 return Page();
             }
+            else if (Student.Year == 0)
+            {
+                return Page();
+            }
             return RedirectToPage("/Index", new { SFirstName = Student.FirstName});
         }
     }

@@ -7,7 +7,7 @@
 }
 
 <h1>Student Information Form</h1>
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     <div>
         <input type="text" asp-for="Student.FirstName" placeholder="First Name" />
         <span asp-validation-for="Student.FirstName" />
@@ -27,6 +27,16 @@
     <div>
         <input type="date" asp-for="Student.BirthDate" placeholder="Birth date" />
         <span asp-validation-for="Student.BirthDate" />
+    </div>
+    <div>
+        <select asp-for="Student.Year">
+            <option value="0">Select the year you are in</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
     </div>
     <button type="submit">Submit</button>
 </form>
