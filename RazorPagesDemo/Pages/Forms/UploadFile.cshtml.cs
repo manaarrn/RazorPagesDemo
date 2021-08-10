@@ -27,6 +27,11 @@ namespace RazorPagesDemo.Pages.Forms
                 TempData[MessageKey] = "Upload failed!";
                 return RedirectToAction(Request.Path);
             }
+            string dir = Path.Combine(_environment.WebRootPath, "uploads");
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
             var file = Path.Combine(_environment.WebRootPath, "uploads", Upload.FileName);
             using (var fileStream = new FileStream(file, FileMode.Create))
             {
